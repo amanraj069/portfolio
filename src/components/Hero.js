@@ -46,16 +46,16 @@ export default function Hero() {
             </p>
             <div className="h-2 sm:h-3" />
             <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
-              CG: 9.3 | 6+ months of experience in web development.
+              CG: 9.3 | Passout Year: 2027.
             </p>
           </div>
-          <div className="w-full md:w-[40%] flex justify-center md:justify-end mt-6 md:mt-0">
+          <div className="w-full md:w-[40%] flex justify-center md:justify-end mt-2 md:mt-0">
             <Image
               src="/home/cover_me.JPG"
               alt="Aman Raj profile"
               width={240}
               height={240}
-              className="lg:w-40 lg:h-40 w-48 h-48 md:w-full md:h-auto aspect-square object-cover rounded-lg border border-gray-200 shadow-sm"
+              className="w-40 h-40 md:w-full md:h-auto aspect-square object-cover rounded-lg border border-gray-200 shadow-sm"
               priority
             />
           </div>
