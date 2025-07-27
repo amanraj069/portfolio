@@ -1,8 +1,5 @@
-// Temporarily removing React Icons to fix the error
-// Will use CSS-based icons and emojis as fallback
-
 import Navigation from "../components/Navigation";
-import Hero from "../components/Hero";
+import Hero from "../components/home/Hero";
 
 export default function Home() {
   return (
