@@ -25,8 +25,8 @@ const ExperienceCard = ({ exp }) => {
     setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  return (
-    <div className="w-full block bg-white/90 rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-shadow p-6 group">
+  const cardContent = (
+    <div className="w-full block bg-white/90 rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-shadow p-6 group cursor-pointer">
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="w-full md:w-[40%] flex-shrink-0 flex justify-center items-center relative">
           {/* Carousel */}
@@ -73,6 +73,18 @@ const ExperienceCard = ({ exp }) => {
         </div>
       </div>
     </div>
+  );
+  return exp.link ? (
+    <a
+      href={exp.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none" }}
+    >
+      {cardContent}
+    </a>
+  ) : (
+    cardContent
   );
 };
 
