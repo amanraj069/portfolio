@@ -23,6 +23,18 @@ export default function ProjectsPage() {
       deployedLink: "https://next-zerogravity-omega.vercel.app/",
     },
     {
+      id: "milestone",
+      image: ["/projects/Milestone.png"],
+      title: "Milestone",
+      techstack: ["Express.js", "MongoDB", "EJS", "JWT"],
+      description: [
+        "A next-gen freelancing platform enabling milestone-based payments and smart job matching.",
+        "Includes verified skill rankings, real-time chat, and admin-led dispute resolution.",
+        "Dynamic dashboards for employers and freelancers built on a secure, scalable stack.",
+      ],
+      link: "https://github.com/amanraj069/MileStone",
+    },
+    {
       id: "enest",
       image: ["/exp/Enest.png"],
       title: "Enest (Internship)",
@@ -50,7 +62,7 @@ export default function ProjectsPage() {
     },
     {
       id: "enestGrain",
-      image: ["/projects/EnestAdmin.png"],
+      image: ["/projects/Grain.png"],
       title: "GRAIN (Internship)",
       techstack: ["Next.js", "Express.js", "AWS", "MongoDB", "TailwindCSS"],
       description: [
@@ -59,18 +71,6 @@ export default function ProjectsPage() {
         "Deployed on AWS for fast global delivery.",
       ],
       link: "https://github.com/E-Nest-2024/next-Grain",
-    },
-    {
-      id: "milestone",
-      image: ["/projects/Milestone.png"],
-      title: "Milestone",
-      techstack: ["Express.js", "MongoDB", "EJS", "JWT"],
-      description: [
-        "A next-gen freelancing platform enabling milestone-based payments and smart job matching.",
-        "Includes verified skill rankings, real-time chat, and admin-led dispute resolution.",
-        "Dynamic dashboards for employers and freelancers built on a secure, scalable stack.",
-      ],
-      link: "https://github.com/amanraj069/MileStone",
     },
     {
       id: "agriai",
@@ -91,6 +91,19 @@ export default function ProjectsPage() {
       ],
       link: "https://github.com/Shreyaan16/TeamAlpha?tab=readme-ov-file",
       deployedLink: "https://teamalpha-agriai.streamlit.app/",
+    },
+    {
+      id: "witchcurse",
+      image: ["/projects/WitchCurse.png"],
+      title: "Witch Curse",
+      techstack: ["Unity", "C#"],
+      description: [
+        "An AI-powered agricultural assistant offering weather insights, soil analysis, crop recommendations, and disease prediction.",
+        "Includes a smart chatbot, geofenced planning, and downloadable insights.",
+        "Built with Streamlit and deployed on Hugging Face for easy access.",
+      ],
+      link: "https://github.com/amanraj069/Witch-s-Curse",
+      deployedLink: "https://globalgamejam.org/games/2025/witchs-curse-7",
     },
   ];
   return (
