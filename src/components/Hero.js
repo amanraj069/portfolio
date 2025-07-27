@@ -26,43 +26,43 @@ export default function Hero() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-32 bg-white ">
-      <div className="max-w-4xl w-full mx-auto rounded-xl shadow-md bg-white/90 backdrop-blur-sm border border-gray-100 p-8 md:p-12 mb-12">
+    <section className="min-h-screen flex items-center justify-center px-2 sm:px-4 pt-24 sm:pt-32 bg-white">
+      <div className="max-w-4xl w-full mx-auto rounded-xl shadow-md bg-white/90 backdrop-blur-sm border border-gray-100 p-4 sm:p-8 md:p-12 mb-8 sm:mb-12">
         {/* Greeting, description, and image side by side */}
-        <div className="mb-10 flex flex-col md:flex-row items-center md:items-start gap-8">
+        <div className="mb-8 sm:mb-10 flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
           <div className="w-full md:w-[60%]">
-            <h2 className="text-3xl md:text-4xl font-normal mb-5 text-black">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal mb-4 sm:mb-5 text-black">
               Hi!
             </h2>
-            <p className="text-lg md:text-lg text-gray-800 leading-relaxed max-w-3xl">
+            <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
               Exploring the Fun behind software engineering and Computers!
               Computer Science student at IIIT Sricity with expertise in
               full-stack development, AI/ML, and modern web technologies.
             </p>
-            <br />
-            <p className="text-lg md:text-lg text-gray-800 leading-relaxed max-w-3xl">
+            <div className="h-2 sm:h-3" />
+            <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
               Currently working as an SDE Intern at Agrivision4u, MetaStar
               Media, and automation intern at SmallGroup.
             </p>
-            <br />
-            <p className="text-lg md:text-lg text-gray-800 leading-relaxed max-w-3xl">
+            <div className="h-2 sm:h-3" />
+            <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
               CG: 9.3 | 6+ months of experience in web development.
             </p>
           </div>
-          <div className="w-full md:w-[40%] flex justify-center md:justify-end">
+          <div className="w-full md:w-[40%] flex justify-center md:justify-end mt-6 md:mt-0">
             <Image
               src="/home/cover_me.JPG"
               alt="Aman Raj profile"
-              width={320}
-              height={320}
-              className="w-40 h-40 md:w-full md:h-auto aspect-square object-cover rounded-lg border border-gray-200 shadow-sm"
+              width={240}
+              height={240}
+              className="lg:w-40 lg:h-40 w-48 h-48 md:w-full md:h-auto aspect-square object-cover rounded-lg border border-gray-200 shadow-sm"
               priority
             />
           </div>
         </div>
 
         {/* Social links (matching the icons in the design) */}
-        <div className="flex gap-4 mb-10">
+        <div className="flex gap-3 sm:gap-4 mb-8 sm:mb-10 flex-wrap justify-center md:justify-start">
           <a
             href="http://www.linkedin.com/in/amanraj-iiits"
             className="text-black hover:text-gray-600 transition-colors"
@@ -93,18 +93,18 @@ export default function Hero() {
         </div>
 
         {/* Recent Work/Projects section */}
-        <div>
-          <h2 className="text-2xl md:text-3xl font-normal mb-7 text-black">
+        <div className="mt-8 sm:mt-10">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-normal mb-5 sm:mb-7 text-black">
             Recent Work
           </h2>
-          <div className="space-y-7">
+          <div className="space-y-5 sm:space-y-7">
             {recentWork.map((work, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-lg border border-gray-100 shadow-sm p-5"
+                className="bg-white rounded-lg border border-gray-100 shadow-sm p-4 sm:p-5"
               >
                 <div className="text-xs text-gray-500 mb-1">{work.date}</div>
-                <h3 className="text-lg font-normal mb-2 text-black">
+                <h3 className="text-base sm:text-lg font-normal mb-1 sm:mb-2 text-black">
                   <a
                     href={work.link}
                     target="_blank"
@@ -114,7 +114,7 @@ export default function Hero() {
                     {work.title}
                   </a>
                 </h3>
-                <p className="text-gray-700 leading-relaxed text-sm">
+                <p className="text-gray-700 leading-relaxed text-xs sm:text-sm">
                   {work.description}
                 </p>
               </div>
