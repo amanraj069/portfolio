@@ -12,7 +12,7 @@ export default function ExperiencePage() {
         "Integrated GPT-4/Gemini with tools like Notion, Slack, and Pinecone for context-aware AI responses",
         "Explored voice agent automation using Vapi and deepened understanding of LLM-powered solutions",
       ],
-      link: "/experience/smallgroup",
+      link: "https://www.smallgrp.com/",
     },
     {
       id: "metastar",
@@ -24,7 +24,7 @@ export default function ExperiencePage() {
         "Built SSR pages, reusable frontend components, and secure REST APIs for core features",
         "Gained cross-framework experience by contributing to internal tools using Vue.js.",
       ],
-      link: "/experience/metastar",
+      link: "https://metastarmedia.io/",
     },
     {
       id: "agrivision4u",
@@ -36,7 +36,7 @@ export default function ExperiencePage() {
         "Implemented backend logic with JWT auth, role-based access, and AWS + Cloudinary integrations.",
         "Led a team of interns, managed Git workflows, and gained hands-on leadership and mentoring experience.",
       ],
-      link: "/experience/agrivision4u",
+      link: "https://www.enest.info/",
     },
     {
       id: "epoch",
@@ -48,7 +48,7 @@ export default function ExperiencePage() {
         "Conducted a 3-day hands-on bootcamp for 100+ 2nd and 3rd-year students on DL",
         "Mentored juniors in ML/DL concepts, project development, and research prep.",
       ],
-      link: "/experience/smallgroup",
+      link: "https://www.linkedin.com/posts/amanraj-iiits_ai-machinelearning-deeplearning-activity-7290383409833558016-Oa7Y?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETcs_sBSZtMjHBO4WgRwTvLuSH5YGlbfGE",
     },
     {
       id: "iota",
@@ -60,7 +60,7 @@ export default function ExperiencePage() {
         "Represented IOTA in inter-college hackathons, competitions, and research challenges.",
         "Guided team members in preparing for external events.",
       ],
-      link: "/experience/smallgroup",
+      link: "https://www.linkedin.com/posts/amanraj-iiits_ai-machinelearning-iota-activity-7231114538929037314-Kdkq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETcs_sBSZtMjHBO4WgRwTvLuSH5YGlbfGE",
     },
   ];
   return (

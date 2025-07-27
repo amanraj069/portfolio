@@ -40,9 +40,9 @@ export default function ProjectsPage() {
       title: "Enest (Internship)",
       techstack: ["Next.js", "Express.js", "AWS", "MongoDB", "TailwindCSS"],
       description: [
-        "A modern, animated portfolio to showcase projects and experience.",
-        "Features smooth transitions, dark mode, and mobile-first design.",
-        "Deployed on AWS for fast global delivery.",
+        "An Edtech platform made specially for Agri department students.",
+        "Developed full-stack web applications using Next.js, Node.js, and MongoDB.",
+        "Integrated RESTful APIs and implemented backend logic for agri-tech features.",
       ],
       link: "https://github.com/E-Nest-2024/front-end",
       deployedLink: "https://www.enest.info/",
@@ -53,9 +53,9 @@ export default function ProjectsPage() {
       title: "Enest Admin (Internship)",
       techstack: ["Next.js", "Express.js", "AWS", "MongoDB", "TailwindCSS"],
       description: [
-        "A modern, animated admin dashboard for managing content and users.",
-        "Features role-based access, real-time analytics, and a responsive design.",
-        "Deployed on AWS for fast global delivery.",
+        "A modern admin dashboard for managing content and users for Enest.",
+        "Features role-based access, real-time analytics, and complete control over the platform",
+        "Single account single device for extra security and privacy.",
       ],
       link: "https://github.com/E-Nest-2024/next-admin",
       deployedLink: "https://admin.enest.info/",
@@ -66,9 +66,9 @@ export default function ProjectsPage() {
       title: "GRAIN (Internship)",
       techstack: ["Next.js", "Express.js", "AWS", "MongoDB", "TailwindCSS"],
       description: [
-        "A modern, animated admin dashboard for managing content and users.",
-        "Features role-based access, real-time analytics, and a responsive design.",
-        "Deployed on AWS for fast global delivery.",
+        "A modern website for accessing and publishing Magazines related to Agri-space.",
+        "Allows blogs to be saved, and articles to be previewed",
+        ,
       ],
       link: "https://github.com/E-Nest-2024/next-Grain",
     },
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
     },
     {
       id: "witchcurse",
-      image: ["/projects/WitchCurse.png"],
+      image: ["/projects/Witchcurse.png"],
       title: "Witch Curse",
       techstack: ["Unity", "C#"],
       description: [

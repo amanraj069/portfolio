@@ -29,7 +29,7 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center px-2 sm:px-4 pt-24 sm:pt-32 bg-white">
       <div className="max-w-4xl w-full mx-auto rounded-xl shadow-md bg-white/90 backdrop-blur-sm border border-gray-100 p-4 sm:p-8 md:p-12 mb-8 sm:mb-12">
         {/* Greeting, description, and image side by side */}
-        <div className="mb-8 sm:mb-10 flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
+        <div className="mb-6 lg:mb-2 sm:mb-10 flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
           <div className="w-full md:w-[60%]">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal mb-4 sm:mb-5 text-black">
               Hi!
