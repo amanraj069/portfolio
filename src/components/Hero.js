@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Hero() {
   // Array of recent work/projects
   const recentWork = [
@@ -6,7 +7,7 @@ export default function Hero() {
       title: "Week 2: Indian startups behind the scenes",
       description:
         "Copycat Culture vs. Original Innovation: The Flipkart-Amazon Paradox. Diving deep into why India's most successful startups are brilliant adaptations, not breakthrough innovations",
-      link: "https://github.com/yourprofile/ecommerce-ai-platform",
+      link: "https://medium.com/@amanraj3567/copycat-culture-vs-original-innovation-the-flipkart-amazon-paradox-075222f4234c",
     },
     {
       date: "24 Jul 2025",
@@ -49,10 +50,13 @@ export default function Hero() {
             </p>
           </div>
           <div className="w-full md:w-[40%] flex justify-center md:justify-end">
-            <img
+            <Image
               src="/home/cover_me.JPG"
               alt="Aman Raj profile"
+              width={320}
+              height={320}
               className="w-40 h-40 md:w-full md:h-auto aspect-square object-cover rounded-lg border border-gray-200 shadow-sm"
+              priority
             />
           </div>
         </div>

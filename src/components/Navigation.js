@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Navigation() {
   return (
     <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50">
@@ -8,36 +9,36 @@ export default function Navigation() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-8">
-            <a
+            <Link
               href="/"
               className="text-black hover:text-gray-600 transition-colors text-sm font-normal underline decoration-1 underline-offset-4"
             >
               home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/experience"
               className="text-black hover:text-gray-600 transition-colors text-sm font-normal underline decoration-1 underline-offset-4"
             >
               experience
-            </a>
-            <a
+            </Link>
+            <Link
               href="/skills"
               className="text-black hover:text-gray-600 transition-colors text-sm font-normal underline decoration-1 underline-offset-4"
             >
               skills
-            </a>
-            <a
+            </Link>
+            <Link
               href="/projects"
               className="text-black hover:text-gray-600 transition-colors text-sm font-normal underline decoration-1 underline-offset-4"
             >
               projects
-            </a>
-            <a
+            </Link>
+            <Link
               href="/more"
               className="text-black hover:text-gray-600 transition-colors text-sm font-normal underline decoration-1 underline-offset-4"
             >
               more
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button (optional) */}
