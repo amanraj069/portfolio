@@ -45,7 +45,7 @@ export default function SkillsPage() {
   return (
     <main className="min-h-screen bg-white text-black flex flex-col items-center px-12 pt-24 pb-12">
       <p className="text-lg text-gray-700 mb-8 max-w-2xl text-center mt-4">
-        Technologies and tools I'm familiar with
+        Technologies and tools I&aposm familiar with
       </p>
       <div className="w-full max-w-4xl flex flex-col gap-8">
         <Section title="Programming Languages" items={languages} />

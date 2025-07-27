@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 /**
  * ProjectList component displays a list of projects with their details.
@@ -15,11 +16,14 @@ export default function ProjectList({ projects }) {
           {/* Image section: 40% width, 100% height */}
           <div className="w-2/5 flex items-stretch p-4">
             {project.image && project.image[0] && (
-              <img
+              <Image
                 src={project.image[0]}
                 alt={project.title}
                 className="w-full h-full object-cover rounded-sm border border-zinc-200"
                 style={{ minHeight: "180px", maxHeight: "100%" }}
+                width={400}
+                height={180}
+                unoptimized
               />
             )}
           </div>
