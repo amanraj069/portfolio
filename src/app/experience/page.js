@@ -4,7 +4,7 @@ export default function ExperiencePage() {
   const experiences = [
     {
       id: "smallgroup",
-      image: "/exp/Smallgroup.png",
+      image: ["/exp/Smallgroup.png"],
       title: "Automation Intern at SmallGroup",
       duration: "July 2025 - Present",
       description: [
@@ -16,7 +16,7 @@ export default function ExperiencePage() {
     },
     {
       id: "metastar",
-      image: "/exp/Metastar.png",
+      image: ["/exp/Metastar.png"],
       title: "SDE Intern at MetaStar Media",
       duration: "July 2025 - Present",
       description: [
@@ -28,7 +28,7 @@ export default function ExperiencePage() {
     },
     {
       id: "agrivision4u",
-      image: "/exp/Enest.png",
+      image: ["/exp/Enest.png"],
       title: "SDE Intern at Agrivision4u",
       duration: "Feb 2025 - Present",
       description: [
@@ -40,7 +40,7 @@ export default function ExperiencePage() {
     },
     {
       id: "epoch",
-      image: "/exp/Epoch_D1.JPG",
+      image: ["/exp/Epoch_D1.JPG"],
       title: "Deep Learning Core at Epoch",
       duration: "Aug 2024 - Aug 2025",
       description: [
@@ -52,7 +52,7 @@ export default function ExperiencePage() {
     },
     {
       id: "iota",
-      image: "/exp/IOTA.JPG",
+      image: ["/exp/IOTA.JPG"],
       title: "AI/ML Core at IOTA",
       duration: "Aug 2024 - Aug 2025",
       description: [
