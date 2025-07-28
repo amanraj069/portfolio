@@ -13,6 +13,7 @@ const cloudAndDevOps = [
   "Google Cloud",
   "Docker",
   "Kubernetes",
+  "Apache kafka",
   "Container Orchestration",
 ];
 

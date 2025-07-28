@@ -3,18 +3,6 @@ import ExperienceList from "@/components/experience/ExperienceList";
 export default function ExperiencePage() {
   const experiences = [
     {
-      id: "smallgroup",
-      image: ["/exp/Smallgroup.png"],
-      title: "Automation Intern at SmallGroup",
-      duration: "July 2025 - Present",
-      description: [
-        "Built low-code automation workflows using n8n for LinkedIn lead generation, RAG-based chatbots, and social media content automation.",
-        "Integrated GPT-4/Gemini with tools like Notion, Slack, and Pinecone for context-aware AI responses",
-        "Explored voice agent automation using Vapi and deepened understanding of LLM-powered solutions",
-      ],
-      link: "https://www.smallgrp.com/",
-    },
-    {
       id: "metastar",
       image: ["/exp/Metastar.png"],
       title: "SDE Intern at MetaStar Media",
@@ -25,6 +13,18 @@ export default function ExperiencePage() {
         "Gained cross-framework experience by contributing to internal tools using Vue.js.",
       ],
       link: "https://metastarmedia.io/",
+    },
+    {
+      id: "smallgroup",
+      image: ["/exp/Smallgroup.png"],
+      title: "Automation Intern at SmallGroup",
+      duration: "July 2025 - Present",
+      description: [
+        "Built low-code automation workflows using n8n for LinkedIn lead generation, RAG-based chatbots, and social media content automation.",
+        "Integrated GPT-4/Gemini with tools like Notion, Slack, and Pinecone for context-aware AI responses",
+        "Explored voice agent automation using Vapi and deepened understanding of LLM-powered solutions",
+      ],
+      link: "https://www.smallgrp.com/",
     },
     {
       id: "agrivision4u",
