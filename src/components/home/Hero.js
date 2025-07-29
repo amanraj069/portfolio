@@ -20,7 +20,7 @@ export default function Hero() {
       date: "14 Jul 2025",
       title: "Started as an Intern at MetaStar Media",
       description:
-        "The launch of zeroGravity marks a significant milestone in my journey, opening the platform to the public for waitlisting. This step is crucial for gathering user feedback and building a community around the project.",
+        "Joined MetaStar Media as an intern, where I am going to be working on developing the platform using Next.js, Express.js, I hope this helps me enhance my skills in development and system architecture.",
       link: "https://metastarmedia.io/",
     },
   ];
