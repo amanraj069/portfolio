@@ -3,6 +3,13 @@ export default function Hero() {
   // Array of recent work/projects
   const recentWork = [
     {
+      date: "7 Aug 2025",
+      title: "Week 3: The Funding Mirage",
+      description:
+        "Why India Builds the 47th App, Not the First Moonshot - An exploration of how India's startup boom fuels optimization over invention, chasing proven business models instead of creating global-first breakthroughs.",
+      link: "https://medium.com/p/the-funding-mirage-why-150-billion-in-startup-investment-hasnt-created-a-google-f0abe9fdcae4?source=social.linkedin&_nonce=HJ8YPqEW",
+    },
+    {
       date: "27 Jul 2025",
       title: "Week 2: Indian startups behind the scenes",
       description:
@@ -41,8 +48,8 @@ export default function Hero() {
             </p>
             <div className="h-2 sm:h-3" />
             <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
-              Currently working as an SDE Intern at Agrivision4u, MetaStar
-              Media, and automation intern at SmallGroup.
+              Currently working as an SDE Intern at Enest, MetaStar Media, and
+              automation intern at SmallGroup.
             </p>
             <div className="h-2 sm:h-3" />
             <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">

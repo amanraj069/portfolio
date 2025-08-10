@@ -27,9 +27,9 @@ export default function ExperiencePage() {
       link: "https://www.smallgrp.com/",
     },
     {
-      id: "agrivision4u",
+      id: "enest",
       image: ["/exp/Enest.png"],
-      title: "SDE Intern at Agrivision4u",
+      title: "SDE Intern at Enest",
       duration: "Feb 2025 - Present",
       description: [
         "Developed full-stack features for a large-scale agri-tech platform using Next.js, Express.js, and MongoDB.",
