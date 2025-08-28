@@ -3,6 +3,13 @@ export default function Hero() {
   // Array of recent work/projects
   const recentWork = [
     {
+      date: "26 Aug 2025",
+      title: "Joined Google Developers Group as Head of Technology",
+      description:
+        "Being a part of the Google Developers Group allows me to connect with like-minded individuals and contribute directly to the community. Further more, I can directky interact with students and guide them.",
+      link: "https://www.linkedin.com/posts/amanraj-iiits_googledevelopergroup-techleadership-innovation-activity-7366142881331412992-Azp6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETcs_sBSZtMjHBO4WgRwTvLuSH5YGlbfGE",
+    },
+    {
       date: "7 Aug 2025",
       title: "Week 3: The Funding Mirage",
       description:
