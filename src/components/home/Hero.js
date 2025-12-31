@@ -3,6 +3,13 @@ export default function Hero() {
   // Array of recent work/projects
   const recentWork = [
     {
+      date: "20 Dec 2025",
+      title: "Launched zeroGravity Beta v1.0",
+      description:
+        "Launched zeroGravity Beta v1.0, marking a significant milestone in the development of the platform. This release introduces core features and improvements based on user feedback from the waitlist phase.",
+      link: "https://zerogravity.vercel.app/",
+    },
+    {
       date: "26 Aug 2025",
       title: "Joined Google Developers Group as Head of Technology",
       description:
@@ -55,12 +62,12 @@ export default function Hero() {
             </p>
             <div className="h-2 sm:h-3" />
             <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
-              Currently working as an SDE Intern at Enest, MetaStar Media, and
+              Previously worked as an SDE Intern at Enest, MetaStar Media, and
               automation intern at SmallGroup.
             </p>
             <div className="h-2 sm:h-3" />
             <p className="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
-              CG: 9.3 | Passout Year: 2027.
+              CG: 9.13 | Passout Year: 2027.
             </p>
           </div>
           <div className="w-full md:w-[40%] flex justify-center md:justify-end mt-2 md:mt-0">

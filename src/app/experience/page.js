@@ -3,10 +3,22 @@ import ExperienceList from "@/components/experience/ExperienceList";
 export default function ExperiencePage() {
   const experiences = [
     {
+      id: "enest",
+      image: ["/exp/Enest.png"],
+      title: "SDE Intern at Enest",
+      duration: "Feb 2025 - Dec 2025",
+      description: [
+        "Developed full-stack features for a large-scale agri-tech platform using Next.js, Express.js, and MongoDB.",
+        "Implemented backend logic with JWT auth, role-based access, and AWS + Cloudinary integrations.",
+        "Led a team of interns, managed Git workflows, and gained hands-on leadership and mentoring experience.",
+      ],
+      link: "https://www.enestskill.com/",
+    },
+    {
       id: "metastar",
       image: ["/exp/Metastar.png"],
       title: "SDE Intern at MetaStar Media",
-      duration: "July 2025 - Present",
+      duration: "July 2025 - Sep 2025",
       description: [
         "Designed system architecture and developed backend with Next.js, Express.js, and MySQL",
         "Built SSR pages, reusable frontend components, and secure REST APIs for core features",
@@ -18,7 +30,7 @@ export default function ExperiencePage() {
       id: "smallgroup",
       image: ["/exp/Smallgroup.png"],
       title: "Automation Intern at SmallGroup",
-      duration: "July 2025 - Present",
+      duration: "July 2025 - Sep 2025",
       description: [
         "Built low-code automation workflows using n8n for LinkedIn lead generation, RAG-based chatbots, and social media content automation.",
         "Integrated GPT-4/Gemini with tools like Notion, Slack, and Pinecone for context-aware AI responses",
@@ -27,16 +39,16 @@ export default function ExperiencePage() {
       link: "https://www.smallgrp.com/",
     },
     {
-      id: "enest",
-      image: ["/exp/Enest.png"],
-      title: "SDE Intern at Enest",
-      duration: "Feb 2025 - Present",
+      id: "gdg",
+      image: ["/exp/GDG.JPG"],
+      title: "Head of Technology at Google Developers Group IIIT Sricity",
+      duration: "Aug 2025 - Present",
       description: [
-        "Developed full-stack features for a large-scale agri-tech platform using Next.js, Express.js, and MongoDB.",
-        "Implemented backend logic with JWT auth, role-based access, and AWS + Cloudinary integrations.",
-        "Led a team of interns, managed Git workflows, and gained hands-on leadership and mentoring experience.",
+        "Led the technical direction of GDG IIIT Sricity, overseeing architecture and execution of community-driven projects.",
+        "Mentored developers in full-stack development, Git workflows, and scalable system design.",
+        "Enabled deployments and event infrastructure using cloud technologies such as AWS and Firebase.",
       ],
-      link: "https://www.enest.info/",
+      link: "https://www.enestskill.com/",
     },
     {
       id: "epoch",

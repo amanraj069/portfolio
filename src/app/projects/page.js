@@ -20,7 +20,7 @@ export default function ProjectsPage() {
         "Full privacy control per goal plus a connected community for shared inspiration.",
       ],
       link: "https://github.com/amanraj069/next-zerogravity",
-      deployedLink: "https://next-zerogravity-omega.vercel.app/",
+      deployedLink: "https://zerogravity.vercel.app/",
     },
     {
       id: "milestone",
@@ -45,7 +45,7 @@ export default function ProjectsPage() {
         "Integrated RESTful APIs and implemented backend logic for agri-tech features.",
       ],
       link: "https://github.com/E-Nest-2024/front-end",
-      deployedLink: "https://www.enest.info/",
+      deployedLink: "https://www.enestskill.com/",
     },
     {
       id: "enestadmin",
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900 flex flex-col items-center px-6 pt-24 pb-8">
       <p className="text-lg text-zinc-600 mb-8 max-w-2xl text-center mt-4">
-        A selection of my work in web development, AI/ML, and more.
+        A selection of my work in development, AI/ML, and more.
       </p>
       <ProjectList projects={projects} />
     </main>
