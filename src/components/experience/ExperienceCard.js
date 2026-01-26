@@ -26,7 +26,7 @@ const ExperienceCard = ({ exp }) => {
   };
 
   const cardContent = (
-    <div className="w-full block bg-white/90 rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition-shadow p-6 group cursor-pointer">
+    <div className="w-full block bg-white/90 border border-gray-100 shadow-md hover:shadow-lg transition-shadow p-6 group cursor-pointer">
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="w-full md:w-[40%] flex-shrink-0 flex justify-center items-center relative">
           {/* Carousel */}
@@ -35,7 +35,7 @@ const ExperienceCard = ({ exp }) => {
             alt={exp.title}
             width={600}
             height={400}
-            className="w-full object-cover rounded-md border border-gray-200 shadow-sm mb-4 md:mb-0"
+            className="w-full object-cover border border-gray-200 shadow-sm mb-4 md:mb-0"
             priority
           />
           {images.length > 1 && (
@@ -44,7 +44,7 @@ const ExperienceCard = ({ exp }) => {
               {images.map((_, idx) => (
                 <span
                   key={idx}
-                  className={`inline-block w-2 h-2 rounded-full ${
+                  className={`inline-block w-2 h-2 ${
                     idx === current ? "bg-gray-800" : "bg-gray-300"
                   }`}
                 />

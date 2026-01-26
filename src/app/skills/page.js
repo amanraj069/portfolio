@@ -79,7 +79,7 @@ function Section({ title, items }) {
 
 function SkillBadge({ children }) {
   return (
-    <span className="px-3 py-1 rounded bg-gray-100 text-gray-800 text-sm font-medium border border-gray-200">
+    <span className="px-3 py-1 bg-gray-100 text-gray-800 text-sm font-medium border border-gray-200">
       {children}
     </span>
   );

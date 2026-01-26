@@ -7,7 +7,7 @@ export default function ProjectList({ projects }) {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="w-full bg-white/90 rounded-xl border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow p-0 flex flex-col md:flex-row gap-0 min-h-[180px] md:min-h-[180px]"
+          className="w-full bg-white/90 border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow p-0 flex flex-col md:flex-row gap-0 min-h-[180px] md:min-h-[180px]"
         >
           {/* Image section: Full width on mobile, 40% on desktop */}
           <div className="w-full md:w-2/5 flex items-stretch p-4 md:p-4">
@@ -15,7 +15,7 @@ export default function ProjectList({ projects }) {
               <Image
                 src={project.image[0]}
                 alt={project.title}
-                className="w-full h-full object-cover rounded-sm border border-zinc-200"
+                className="w-full h-full object-cover border border-zinc-200"
                 style={{
                   minHeight: "120px",
                   maxHeight: "200px",
@@ -40,7 +40,7 @@ export default function ProjectList({ projects }) {
                 {project.techstack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 py-0.5 bg-zinc-100 text-xs rounded text-zinc-700 border border-zinc-200"
+                    className="px-2 py-0.5 bg-zinc-100 text-xs text-zinc-700 border border-zinc-200"
                   >
                     {tech}
                   </span>
@@ -50,7 +50,7 @@ export default function ProjectList({ projects }) {
               {/* Description with responsive text size */}
               <ul className="list-disc pl-4 text-zinc-700 text-xs md:text-sm space-y-1">
                 {project.description.map(
-                  (desc, idx) => desc && <li key={idx}>{desc}</li>
+                  (desc, idx) => desc && <li key={idx}>{desc}</li>,
                 )}
               </ul>
             </div>

@@ -28,15 +28,15 @@ export default function Contact() {
           </div>
         </div>
         <div className="flex gap-4 justify-center">
-          <a 
-            href="mailto:aman.r23@iiits.in" 
-            className="flex items-center gap-2 px-6 py-2 bg-foreground text-background rounded-full hover:bg-foreground/90 transition-colors text-sm"
+          <a
+            href="mailto:aman.r23@iiits.in"
+            className="flex items-center gap-2 px-6 py-2 bg-foreground text-background hover:bg-foreground/90 transition-colors text-sm"
           >
             <span>📧</span> Email
           </a>
-          <a 
-            href="https://github.com/amanraj069" 
-            className="flex items-center gap-2 px-6 py-2 border border-foreground/20 rounded-full hover:border-foreground/40 transition-colors text-sm"
+          <a
+            href="https://github.com/amanraj069"
+            className="flex items-center gap-2 px-6 py-2 border border-foreground/20 hover:border-foreground/40 transition-colors text-sm"
           >
             <span>🐙</span> GitHub
           </a>

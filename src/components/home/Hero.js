@@ -48,7 +48,7 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-2 sm:px-4 pt-24 sm:pt-32 bg-white">
-      <div className="max-w-4xl w-full mx-auto rounded-xl shadow-md bg-white/90 backdrop-blur-sm border border-gray-100 p-4 sm:p-8 md:p-12 mb-8 sm:mb-12">
+      <div className="max-w-4xl w-full mx-auto shadow-md bg-white/90 backdrop-blur-sm border border-gray-100 p-4 sm:p-8 md:p-12 mb-8 sm:mb-12">
         {/* Greeting, description, and image side by side */}
         <div className="mb-6 lg:mb-2 sm:mb-10 flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8">
           <div className="w-full md:w-[60%]">
@@ -76,7 +76,7 @@ export default function Hero() {
               alt="Aman Raj profile"
               width={240}
               height={240}
-              className="w-40 h-40 md:w-full md:h-auto aspect-square object-cover rounded-lg border border-gray-200 shadow-sm"
+              className="w-40 h-40 md:w-full md:h-auto aspect-square object-cover border border-gray-200 shadow-sm"
               priority
             />
           </div>
@@ -122,7 +122,7 @@ export default function Hero() {
             {recentWork.map((work, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-lg border border-gray-100 shadow-sm p-4 sm:p-5"
+                className="bg-white border border-gray-100 shadow-sm p-4 sm:p-5"
               >
                 <div className="text-xs text-gray-500 mb-1">{work.date}</div>
                 <h3 className="text-base sm:text-lg font-normal mb-1 sm:mb-2 text-black">
