@@ -26,7 +26,7 @@ const ExperienceCard = ({ exp }) => {
   };
 
   const cardContent = (
-    <div className="w-full block bg-white/90 dark:bg-[#121212]/90 border border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-lg transition-all p-6 group cursor-pointer">
+    <div className="w-full block bg-white/90 dark:bg-[#1e1e1e]/90 border border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-lg transition-all p-6 group cursor-pointer">
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="w-full md:w-[40%] flex-shrink-0 flex justify-center items-center relative">
           {/* Carousel */}

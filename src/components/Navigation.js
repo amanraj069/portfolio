@@ -14,7 +14,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 dark:bg-[#121212]/90 backdrop-blur-sm z-50 transition-colors duration-300">
+    <nav className="fixed top-0 w-full bg-white/90 dark:bg-[#1e1e1e]/90 backdrop-blur-sm z-50 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6 py-6">
         <div className="flex justify-between items-center">
           {/* Logo/Name */}
@@ -84,7 +84,7 @@ export default function Navigation() {
           }`}
           aria-hidden={!menuOpen}
         >
-          <div className="flex flex-col space-y-4 bg-white dark:bg-[#121212] p-4 transition-colors">
+          <div className="flex flex-col space-y-4 bg-white dark:bg-[#1e1e1e] p-4 transition-colors">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

@@ -16,7 +16,7 @@
 
 /* Dark mode using class strategy */
 .dark {
-  --background: #121212;
+  --background: #1e1e1e;
   --foreground: #ededed;
 }
 
@@ -27,7 +27,7 @@ html {
 }
 
 html.dark {
-  background-color: #121212;
+  background-color: #1e1e1e;
 }
 
 body {

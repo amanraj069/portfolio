@@ -7,7 +7,7 @@ export default function ProjectList({ projects }) {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="w-full bg-white/90 dark:bg-[#121212]/90 border-2 border-gray-200 dark:border-neutral-700 shadow-lg hover:shadow-xl transition-all p-0 flex flex-col md:flex-row gap-0 min-h-[180px] md:min-h-[180px]"
+          className="w-full bg-white/90 dark:bg-[#1e1e1e]/90 border-2 border-gray-200 dark:border-neutral-700 shadow-lg hover:shadow-xl transition-all p-0 flex flex-col md:flex-row gap-0 min-h-[180px] md:min-h-[180px]"
         >
           {/* Image section: Full width on mobile, 40% on desktop */}
           <div className="w-full md:w-2/5 flex items-stretch p-4 md:p-4">

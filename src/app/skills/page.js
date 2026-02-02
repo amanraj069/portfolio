@@ -45,7 +45,7 @@ const csConcepts = [
 
 export default function SkillsPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white flex flex-col items-center px-12 pt-24 pb-12 transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-[#1e1e1e] text-black dark:text-white flex flex-col items-center px-12 pt-24 pb-12 transition-colors duration-300">
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl text-center mt-4 transition-colors">
         Technologies and tools I&apos;m familiar with
       </p>
