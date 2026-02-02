@@ -7,7 +7,7 @@ export default function ProjectList({ projects }) {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="w-full bg-white/90 border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow p-0 flex flex-col md:flex-row gap-0 min-h-[180px] md:min-h-[180px]"
+          className="w-full bg-white/90 dark:bg-[#121212]/90 border-2 border-gray-200 dark:border-neutral-700 shadow-lg hover:shadow-xl transition-all p-0 flex flex-col md:flex-row gap-0 min-h-[180px] md:min-h-[180px]"
         >
           {/* Image section: Full width on mobile, 40% on desktop */}
           <div className="w-full md:w-2/5 flex items-stretch p-4 md:p-4">
@@ -15,7 +15,7 @@ export default function ProjectList({ projects }) {
               <Image
                 src={project.image[0]}
                 alt={project.title}
-                className="w-full h-full object-cover border border-zinc-200"
+                className="w-full h-full object-cover border border-zinc-200 dark:border-neutral-600"
                 style={{
                   minHeight: "120px",
                   maxHeight: "200px",
@@ -31,7 +31,7 @@ export default function ProjectList({ projects }) {
           {/* Content section: Full width on mobile, 60% on desktop */}
           <div className="w-full md:w-3/5 flex flex-col justify-between p-6 lg:p-4 md:p-6">
             <div>
-              <h2 className="text-lg md:text-xl font-semibold mb-2 text-zinc-900">
+              <h2 className="text-lg md:text-xl font-semibold mb-2 text-zinc-900 dark:text-zinc-100 transition-colors">
                 {project.title}
               </h2>
 
@@ -40,7 +40,7 @@ export default function ProjectList({ projects }) {
                 {project.techstack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-2 py-0.5 bg-zinc-100 text-xs text-zinc-700 border border-zinc-200"
+                    className="px-2 py-0.5 bg-zinc-100 dark:bg-neutral-800 text-xs text-zinc-700 dark:text-neutral-300 border border-zinc-200 dark:border-neutral-600 transition-colors"
                   >
                     {tech}
                   </span>
@@ -48,7 +48,7 @@ export default function ProjectList({ projects }) {
               </div>
 
               {/* Description with responsive text size */}
-              <ul className="list-disc pl-4 text-zinc-700 text-xs md:text-sm space-y-1">
+              <ul className="list-disc pl-4 text-zinc-700 dark:text-neutral-300 text-xs md:text-sm space-y-1 transition-colors">
                 {project.description.map(
                   (desc, idx) => desc && <li key={idx}>{desc}</li>,
                 )}
@@ -60,7 +60,7 @@ export default function ProjectList({ projects }) {
               {project.link && (
                 <a
                   href={project.link}
-                  className="text-blue-600 text-sm hover:underline inline-block"
+                  className="text-blue-600 dark:text-blue-400 text-sm hover:underline inline-block transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -70,7 +70,7 @@ export default function ProjectList({ projects }) {
               {project.deployedLink && (
                 <a
                   href={project.deployedLink}
-                  className="text-blue-600 text-sm hover:underline inline-block"
+                  className="text-blue-600 dark:text-blue-400 text-sm hover:underline inline-block transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

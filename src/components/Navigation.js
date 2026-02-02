@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,29 +14,31 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50">
+    <nav className="fixed top-0 w-full bg-white/90 dark:bg-[#121212]/90 backdrop-blur-sm z-50 transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-6 py-6">
         <div className="flex justify-between items-center">
           {/* Logo/Name */}
-          <div className="text-2xl font-normal text-black">Aman Raj</div>
+          <div className="text-2xl font-normal text-black dark:text-white transition-colors">Aman Raj</div>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop Navigation Links & Theme Toggle */}
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-black hover:text-gray-600 transition-colors text-sm font-normal underline decoration-1 underline-offset-4"
+                className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors text-sm font-normal underline decoration-1 underline-offset-4"
               >
                 {link.label}
               </Link>
             ))}
+            <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile: Theme Toggle & Menu Button */}
+          <div className="md:hidden flex items-center space-x-4">
+            <ThemeToggle />
             <button
-              className="text-black focus:outline-none"
+              className="text-black dark:text-white focus:outline-none transition-colors"
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               onClick={() => setMenuOpen((open) => !open)}
             >
@@ -81,12 +84,12 @@ export default function Navigation() {
           }`}
           aria-hidden={!menuOpen}
         >
-          <div className="flex flex-col space-y-4 bg-white p-4">
+          <div className="flex flex-col space-y-4 bg-white dark:bg-[#121212] p-4 transition-colors">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-black hover:text-gray-600 transition-colors text-base font-normal underline decoration-1 underline-offset-4"
+                className="text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors text-base font-normal underline decoration-1 underline-offset-4"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}

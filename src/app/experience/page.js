@@ -76,8 +76,8 @@ export default function ExperiencePage() {
     },
   ];
   return (
-    <main className="min-h-screen bg-white text-black flex flex-col items-center px-4 pt-24">
-      <p className="text-lg text-gray-800 mb-8 mt-6 max-w-2xl">
+    <main className="min-h-screen bg-white dark:bg-[#121212] text-black dark:text-white flex flex-col items-center px-4 pt-24 transition-colors duration-300">
+      <p className="text-lg text-gray-800 dark:text-gray-300 mb-8 mt-6 max-w-2xl transition-colors">
         A brief overview of my professional and academic experience
       </p>
       <ExperienceList experiences={experiences} />

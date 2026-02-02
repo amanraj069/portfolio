@@ -26,7 +26,7 @@ const ExperienceCard = ({ exp }) => {
   };
 
   const cardContent = (
-    <div className="w-full block bg-white/90 border border-gray-100 shadow-md hover:shadow-lg transition-shadow p-6 group cursor-pointer">
+    <div className="w-full block bg-white/90 dark:bg-[#121212]/90 border border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-lg transition-all p-6 group cursor-pointer">
       <div className="flex flex-col md:flex-row items-center gap-6">
         <div className="w-full md:w-[40%] flex-shrink-0 flex justify-center items-center relative">
           {/* Carousel */}
@@ -35,7 +35,7 @@ const ExperienceCard = ({ exp }) => {
             alt={exp.title}
             width={600}
             height={400}
-            className="w-full object-cover border border-gray-200 shadow-sm mb-4 md:mb-0"
+            className="w-full object-cover border border-gray-200 dark:border-neutral-600 shadow-sm mb-4 md:mb-0"
             priority
           />
           {images.length > 1 && (
@@ -45,7 +45,7 @@ const ExperienceCard = ({ exp }) => {
                 <span
                   key={idx}
                   className={`inline-block w-2 h-2 ${
-                    idx === current ? "bg-gray-800" : "bg-gray-300"
+                    idx === current ? "bg-neutral-800 dark:bg-neutral-200" : "bg-neutral-300 dark:bg-neutral-600"
                   }`}
                 />
               ))}
@@ -53,20 +53,20 @@ const ExperienceCard = ({ exp }) => {
           )}
         </div>
         <div className="flex-1 w-full md:w-[60%]">
-          <h2 className="text-xl font-normal mb-1 group-hover:text-gray-700 transition-colors">
+          <h2 className="text-xl font-normal mb-1 text-black dark:text-white group-hover:text-neutral-700 dark:group-hover:text-neutral-300 transition-colors">
             {exp.title}
           </h2>
           {exp.duration && (
-            <div className="text-xs text-gray-500 mb-2">{exp.duration}</div>
+            <div className="text-xs text-neutral-500 dark:text-neutral-400 mb-2 transition-colors">{exp.duration}</div>
           )}
           {Array.isArray(exp.description) ? (
-            <ul className="text-gray-700 text-sm leading-relaxed list-disc pl-5">
+            <ul className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed list-disc pl-5 transition-colors">
               {exp.description.map((point, idx) => (
                 <li key={idx}>{point}</li>
               ))}
             </ul>
           ) : (
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed transition-colors">
               {exp.description}
             </p>
           )}

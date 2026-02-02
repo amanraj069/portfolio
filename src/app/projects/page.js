@@ -107,8 +107,8 @@ export default function ProjectsPage() {
     },
   ];
   return (
-    <main className="min-h-screen bg-white text-zinc-900 flex flex-col items-center px-6 pt-24 pb-8">
-      <p className="text-lg text-zinc-600 mb-8 max-w-2xl text-center mt-4">
+    <main className="min-h-screen bg-white dark:bg-[#121212] text-zinc-900 dark:text-zinc-100 flex flex-col items-center px-6 pt-24 pb-8 transition-colors duration-300">
+      <p className="text-lg text-zinc-600 dark:text-zinc-400 mb-8 max-w-2xl text-center mt-4 transition-colors">
         A selection of my work in development, AI/ML, and more.
       </p>
       <ProjectList projects={projects} />
