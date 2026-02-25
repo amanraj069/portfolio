@@ -16,20 +16,20 @@ export default function Hero() {
         "Being a part of the Google Developers Group allows me to connect with like-minded individuals and contribute directly to the community. Further more, I can directky interact with students and guide them.",
       link: "https://www.linkedin.com/posts/amanraj-iiits_googledevelopergroup-techleadership-innovation-activity-7366142881331412992-Azp6?utm_source=share&utm_medium=member_desktop&rcm=ACoAAETcs_sBSZtMjHBO4WgRwTvLuSH5YGlbfGE",
     },
-    {
-      date: "7 Aug 2025",
-      title: "Week 3: The Funding Mirage",
-      description:
-        "Why India Builds the 47th App, Not the First Moonshot - An exploration of how India's startup boom fuels optimization over invention, chasing proven business models instead of creating global-first breakthroughs.",
-      link: "https://medium.com/p/the-funding-mirage-why-150-billion-in-startup-investment-hasnt-created-a-google-f0abe9fdcae4?source=social.linkedin&_nonce=HJ8YPqEW",
-    },
-    {
-      date: "27 Jul 2025",
-      title: "Week 2: Indian startups behind the scenes",
-      description:
-        "Copycat Culture vs. Original Innovation: The Flipkart-Amazon Paradox. Diving deep into why India's most successful startups are brilliant adaptations, not breakthrough innovations",
-      link: "https://medium.com/@amanraj3567/copycat-culture-vs-original-innovation-the-flipkart-amazon-paradox-075222f4234c",
-    },
+    // {
+    //   date: "7 Aug 2025",
+    //   title: "Week 3: The Funding Mirage",
+    //   description:
+    //     "Why India Builds the 47th App, Not the First Moonshot - An exploration of how India's startup boom fuels optimization over invention, chasing proven business models instead of creating global-first breakthroughs.",
+    //   link: "https://medium.com/p/the-funding-mirage-why-150-billion-in-startup-investment-hasnt-created-a-google-f0abe9fdcae4?source=social.linkedin&_nonce=HJ8YPqEW",
+    // },
+    // {
+    //   date: "27 Jul 2025",
+    //   title: "Week 2: Indian startups behind the scenes",
+    //   description:
+    //     "Copycat Culture vs. Original Innovation: The Flipkart-Amazon Paradox. Diving deep into why India's most successful startups are brilliant adaptations, not breakthrough innovations",
+    //   link: "https://medium.com/@amanraj3567/copycat-culture-vs-original-innovation-the-flipkart-amazon-paradox-075222f4234c",
+    // },
     {
       date: "24 Jul 2025",
       title: "Opened zeroGravity to public for waitlisting",
@@ -67,7 +67,7 @@ export default function Hero() {
             </p>
             <div className="h-2 sm:h-3" />
             <p className="text-base sm:text-lg text-gray-800 dark:text-gray-200 leading-relaxed max-w-3xl transition-colors">
-              CG: 9.13 | Passout Year: 2027.
+              CG: 9.15 | Passout Year: 2027.
             </p>
           </div>
           <div className="w-full md:w-[40%] flex justify-center md:justify-end mt-2 md:mt-0">
@@ -124,7 +124,9 @@ export default function Hero() {
                 key={idx}
                 className="bg-white dark:bg-[#1e1e1e] border border-gray-100 dark:border-neutral-700 shadow-sm p-4 sm:p-5 transition-colors duration-300"
               >
-                <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">{work.date}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+                  {work.date}
+                </div>
                 <h3 className="text-base sm:text-lg font-normal mb-1 sm:mb-2 text-black dark:text-white transition-colors">
                   <a
                     href={work.link}

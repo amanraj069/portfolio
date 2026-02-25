@@ -18,7 +18,9 @@ export default function Navigation() {
       <div className="max-w-4xl mx-auto px-6 py-6">
         <div className="flex justify-between items-center">
           {/* Logo/Name */}
-          <div className="text-2xl font-normal text-black dark:text-white transition-colors">Aman Raj</div>
+          <div className="text-2xl font-normal text-black dark:text-white transition-colors">
+            Aman Raj
+          </div>
 
           {/* Desktop Navigation Links & Theme Toggle */}
           <div className="hidden md:flex items-center space-x-8">
@@ -31,12 +33,12 @@ export default function Navigation() {
                 {link.label}
               </Link>
             ))}
-            <ThemeToggle />
+            <ThemeToggle idPrefix="desktop-" />
           </div>
 
           {/* Mobile: Theme Toggle & Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            <ThemeToggle />
+            <ThemeToggle idPrefix="mobile-" />
             <button
               className="text-black dark:text-white focus:outline-none transition-colors"
               aria-label={menuOpen ? "Close menu" : "Open menu"}

@@ -41,6 +41,7 @@ const csConcepts = [
   "Cloud Computing & Management",
   "Deep Learning",
   "Automation (n8n)",
+  "Distributed Systems",
 ];
 
 export default function SkillsPage() {
@@ -67,7 +68,9 @@ export default function SkillsPage() {
 function Section({ title, items }) {
   return (
     <section>
-      <h2 className="text-xl font-medium mb-2 text-black dark:text-white transition-colors">{title}</h2>
+      <h2 className="text-xl font-medium mb-2 text-black dark:text-white transition-colors">
+        {title}
+      </h2>
       <div className="flex flex-wrap gap-2">
         {items.map((item) => (
           <SkillBadge key={item}>{item}</SkillBadge>
