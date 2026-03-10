@@ -28,7 +28,7 @@ const devToolsAndIDEs = [
   "Postman",
 ];
 
-const databases = ["MySQL", "MongoDB", "SQLite", "PostgreSQL", "Elasticsearch"];
+const databases = ["MySQL", "MongoDB", "SQLite", "PostgreSQL", "Redis"];
 
 const csConcepts = [
   "Operating Systems",
