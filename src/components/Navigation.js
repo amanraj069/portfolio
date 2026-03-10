@@ -19,7 +19,9 @@ export default function Navigation() {
         <div className="flex justify-between items-center">
           {/* Logo/Name */}
           <div className="text-2xl font-normal text-black dark:text-white transition-colors">
-            Aman Raj
+            <Link key={"aman"} href={"/"}>
+              Aman Raj
+            </Link>
           </div>
 
           {/* Desktop Navigation Links & Theme Toggle */}

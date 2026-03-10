@@ -26,7 +26,7 @@ export default function ProjectsPage() {
       id: "milestone",
       image: ["/projects/Milestone.png"],
       title: "Milestone",
-      techstack: ["Express.js", "MongoDB", "EJS", "JWT"],
+      techstack: ["React.js", "Express.js", "MongoDB", "JWT", "Socket.io"],
       description: [
         "A next-gen freelancing platform enabling milestone-based payments and smart job matching.",
         "Includes verified skill rankings, real-time chat, and admin-led dispute resolution.",
