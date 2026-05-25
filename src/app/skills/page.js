@@ -1,88 +1,118 @@
+"use client";
+import { motion } from "framer-motion";
+
 const languages = ["C", "C++", "Java", "Python"];
 
 const frameworksAndLibraries = [
-  "Tailwind CSS",
-  "React",
+  "Express",
+  "GraphQL",
+  "Nest.js",
   "Next.js",
   "Node.js",
-  "Express",
-  "Nest.js",
-  "GraphQL",
+  "React",
+  "Tailwind CSS",
   "Unity",
 ];
 
 const cloudAndDevOps = [
   "AWS",
-  "Google Cloud",
-  "Docker",
-  "Kubernetes",
   "Apache Kafka",
+  "Docker",
+  "Google Cloud",
+  "Kubernetes",
 ];
 
 const devToolsAndIDEs = [
+  "Cursor",
   "Git",
   "Google Colab",
+  "Postman",
   "Slack",
   "VS Code",
-  "Cursor",
-  "Postman",
 ];
 
-const databases = ["MySQL", "MongoDB", "SQLite", "PostgreSQL", "Redis"];
+const databases = ["MongoDB", "MySQL", "PostgreSQL", "Redis", "SQLite"];
 
 const csConcepts = [
-  "Operating Systems",
-  "Database Management",
-  "Computer Networks",
-  "Object-Oriented Programming (OOP)",
-  "Web Development",
-  "System Design",
-  "Container Orchestration",
-  "Cloud Computing & Management",
-  "Deep Learning",
   "Automation (n8n)",
+  "Cloud Computing & Management",
+  "Computer Networks",
+  "Container Orchestration",
+  "Database Management",
+  "Deep Learning",
   "Distributed Systems",
+  "Object-Oriented Programming (OOP)",
+  "Operating Systems",
+  "System Design",
+  "Web Development",
 ];
 
 export default function SkillsPage() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+    },
+  };
+
   return (
-    <main className="min-h-screen bg-white dark:bg-[#1e1e1e] text-black dark:text-white flex flex-col items-center px-12 pt-24 pb-12 transition-colors duration-300">
-      <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl text-center mt-4 transition-colors">
-        Technologies and tools I&apos;m familiar with
-      </p>
-      <div className="w-full max-w-4xl flex flex-col gap-8">
-        <Section title="Programming Languages" items={languages} />
-        <Section
-          title="Frameworks & Libraries"
-          items={frameworksAndLibraries}
-        />
-        <Section title="Cloud & DevOps" items={cloudAndDevOps} />
-        <Section title="Developer Tools & IDEs" items={devToolsAndIDEs} />
-        <Section title="Databases" items={databases} />
-        <Section title="CS Concepts & Additional Skills" items={csConcepts} />
-      </div>
+    <main className="min-h-screen flex flex-col items-center px-4 md:px-12 pt-28 md:pt-32 pb-24">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="w-full max-w-4xl"
+      >
+        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }} className="mb-16">
+          <h1 className="text-2xl md:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-black dark:text-white">
+            Skills & Expertise
+          </h1>
+          <p className="text-sm md:text-lg text-gray-600 dark:text-gray-400 font-light max-w-2xl">
+            A comprehensive overview of the technologies, frameworks, and tools I use to build scalable applications.
+          </p>
+        </motion.div>
+
+        <div className="flex flex-col gap-16">
+          <Section title="Programming Languages" items={languages} />
+          <Section title="Frameworks & Libraries" items={frameworksAndLibraries} />
+          <Section title="Cloud & DevOps" items={cloudAndDevOps} />
+          <Section title="Databases" items={databases} />
+          <Section title="Developer Tools & IDEs" items={devToolsAndIDEs} />
+          <Section title="CS Concepts & Additional Skills" items={csConcepts} />
+        </div>
+      </motion.div>
     </main>
   );
 }
 
 function Section({ title, items }) {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+    },
+  };
+
   return (
-    <section>
-      <h2 className="text-xl font-medium mb-2 text-black dark:text-white transition-colors">
+    <motion.section variants={itemVariants} className="w-full border-b border-gray-200 dark:border-white/10 pb-6 md:pb-10 last:border-0">
+      <h2 className="text-base md:text-xl font-semibold md:font-medium mb-3 md:mb-6 text-black dark:text-white">
         {title}
       </h2>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-3">
         {items.map((item) => (
           <SkillBadge key={item}>{item}</SkillBadge>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
 
 function SkillBadge({ children }) {
   return (
-    <span className="px-3 py-1 bg-gray-100 dark:bg-neutral-800 text-gray-800 dark:text-neutral-200 text-sm font-medium border border-gray-200 dark:border-neutral-700 transition-colors">
+    <span className="px-3 md:px-4 py-1 md:py-2 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 text-[11px] md:text-sm font-medium rounded-full border border-gray-200/50 dark:border-white/5 transition-all duration-300 cursor-default">
       {children}
     </span>
   );
