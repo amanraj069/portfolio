@@ -8,10 +8,10 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "home" },
-    { href: "/experience", label: "experience" },
-    { href: "/skills", label: "skills" },
-    { href: "/projects", label: "projects" },
+    { href: "#home", label: "home" },
+    { href: "#experience", label: "experience" },
+    { href: "#skills", label: "skills" },
+    { href: "#projects", label: "projects" },
   ];
 
   return (
@@ -19,7 +19,7 @@ export default function Navigation() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-4xl z-50 transition-all duration-300"
+      className="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 transition-all duration-300"
     >
       <div className="bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-lg rounded-full border border-gray-200/50 dark:border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] px-6 py-3">
         <div className="flex justify-between items-center">

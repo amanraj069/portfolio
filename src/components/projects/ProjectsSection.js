@@ -1,6 +1,7 @@
-import ProjectList from "@/components/projects/ProjectList";
+"use client";
+import ProjectList from "./ProjectList";
 
-export default function ProjectsPage() {
+export default function ProjectsSection() {
   const projects = [
     {
       id: "zerogravity",
@@ -32,7 +33,7 @@ export default function ProjectsPage() {
         "Implemented real-time messaging via Socket.io, secure JWT authentication, and optimized MongoDB querying.",
       ],
       link: "https://github.com/amanraj069/MileStone",
-      deployedLink: "https://milestone-aman-raj.vercel.app/",
+      deployedLink: "https://milestone-app.aman-raj.me/",
     },
     {
       id: "enest",
@@ -89,17 +90,20 @@ export default function ProjectsPage() {
       deployedLink: "https://teamalpha-agriai.streamlit.app/",
     },
   ];
+
   return (
-    <main className="min-h-screen flex flex-col items-center px-4 md:px-12 pt-28 md:pt-32 pb-24">
-      <div className="w-full max-w-4xl mb-10 md:mb-12">
-        <h1 className="text-2xl md:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-black dark:text-white">
+    <section id="projects" className="w-full flex flex-col items-center px-4 md:px-12 py-10 md:py-16">
+      <div className="w-full max-w-5xl mb-10 md:mb-12">
+        <h2 className="text-2xl md:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-black dark:text-white">
           Projects
-        </h1>
-        <p className="text-sm md:text-lg text-gray-600 dark:text-gray-400 font-light max-w-2xl">
+        </h2>
+        <p className="text-sm md:text-lg text-gray-600 dark:text-gray-400 font-light max-w-4xl">
           A selection of my work in development, AI/ML, and more.
         </p>
       </div>
-      <ProjectList projects={projects} />
-    </main>
+      <div className="w-full max-w-5xl">
+         <ProjectList projects={projects} />
+      </div>
+    </section>
   );
 }

@@ -28,7 +28,7 @@ const ExperienceCard = ({ exp, index = 0 }) => {
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-stretch gap-0`}>
         
         {/* Image side */}
-        <div className={`w-full md:w-1/2 relative bg-gray-50 dark:bg-[#111] overflow-hidden flex items-center justify-center p-3 md:p-12 border-b md:border-b-0 ${isEven ? 'md:border-r' : 'md:border-l'} border-gray-200 dark:border-white/10`}>
+        <div className={`w-full md:w-1/2 relative bg-gray-50 dark:bg-[#111] overflow-hidden flex items-center justify-center p-3 md:p-8 border-b md:border-b-0 ${isEven ? 'md:border-r' : 'md:border-l'} border-gray-200 dark:border-white/10`}>
           <Image
             src={images[current]}
             alt={exp.title}
@@ -52,7 +52,7 @@ const ExperienceCard = ({ exp, index = 0 }) => {
         </div>
 
         {/* Content side */}
-        <div className="w-full md:w-1/2 p-4 md:p-12 flex flex-col justify-center">
+        <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col justify-center">
           <div className="text-[10px] md:text-sm font-mono text-gray-400 dark:text-gray-500 mb-1.5 md:mb-3">{exp.duration}</div>
           
           <h2 className="text-lg md:text-3xl font-semibold md:font-medium mb-3 md:mb-6 text-black dark:text-white transition-colors">

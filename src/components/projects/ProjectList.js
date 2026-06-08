@@ -4,7 +4,7 @@ import * as motion from "framer-motion/client";
 
 export default function ProjectList({ projects }) {
   return (
-    <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
       {projects.map((project, index) => (
         <motion.div
           key={project.id}
@@ -52,7 +52,7 @@ export default function ProjectList({ projects }) {
           </div>
 
           {/* Content section */}
-          <div className="p-4 md:p-8 flex flex-col flex-1">
+          <div className="p-4 md:p-6 flex flex-col flex-1">
             {/* Header section with Title and Links */}
             <div className="flex flex-row justify-between items-start mb-4 gap-4">
               <h2 className="text-lg md:text-2xl font-semibold md:font-medium text-black dark:text-white transition-colors">
