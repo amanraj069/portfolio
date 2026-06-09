@@ -23,8 +23,8 @@ const ExperienceCard = ({ exp, index = 0 }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       whileHover={{ y: -5 }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="w-full flex flex-col bg-white dark:bg-black/40 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="w-full flex flex-col bg-white dark:bg-black/40 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all duration-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
     >
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-stretch gap-0`}>
         
@@ -35,8 +35,8 @@ const ExperienceCard = ({ exp, index = 0 }) => {
             alt={exp.title}
             width={800}
             height={450}
-            className="w-full h-auto object-contain rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-transform duration-700 group-hover:scale-[1.03]"
-            quality={85}
+            className="w-full h-auto object-contain rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-transform duration-300 group-hover:scale-[1.02]"
+            quality={70}
             sizes="(max-width: 768px) 100vw, 50vw"
           />
           {images.length > 1 && (

@@ -13,12 +13,12 @@ export default function ProjectList({ projects }) {
         {displayedProjects.map((project, index) => (
         <motion.div
           key={project.id}
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           whileHover={{ y: -5 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
-          className="w-full flex flex-col bg-white dark:bg-black/40 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all duration-300 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
+          transition={{ duration: 0.4, ease: "easeOut", delay: index * 0.1 }}
+          className="w-full flex flex-col bg-white dark:bg-black/40 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all duration-200 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
         >
           {/* Entire card clickable link */}
           <a
@@ -38,8 +38,8 @@ export default function ProjectList({ projects }) {
                   alt={project.title}
                   width={800}
                   height={450}
-                  className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02] ${project.darkImage ? 'dark:hidden' : ''}`}
-                  quality={85}
+                  className={`w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02] ${project.darkImage ? 'dark:hidden' : ''}`}
+                  quality={70}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               )}
@@ -49,13 +49,13 @@ export default function ProjectList({ projects }) {
                   alt={project.title}
                   width={800}
                   height={450}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02] hidden dark:block"
-                  quality={85}
+                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02] hidden dark:block"
+                  quality={70}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               )}
               {/* Subtle overlay on hover */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500 pointer-events-none" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-200 pointer-events-none" />
             </div>
           </div>
 
@@ -119,7 +119,7 @@ export default function ProjectList({ projects }) {
         <div className="flex justify-center mt-10">
           <button 
             onClick={() => setShowAll(true)}
-            className="px-6 py-2.5 sm:px-8 sm:py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:scale-105 transition-all duration-300 shadow-xl"
+            className="px-6 py-2.5 sm:px-8 sm:py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:scale-[1.02] transition-all duration-200 shadow-xl"
           >
             Show More
           </button>

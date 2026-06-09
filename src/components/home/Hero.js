@@ -93,7 +93,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
@@ -112,7 +112,7 @@ export default function Hero() {
               <h1 className="text-2xl sm:text-5xl md:text-6xl font-medium tracking-tight text-black dark:text-white leading-none">
                 Hi, I&apos;m Aman.
               </h1>
-              <a href="https://drive.google.com/file/d/1keS_4wUeR87BP87ie8NEfGp1TZ40PeiY/view" target="_blank" rel="noopener noreferrer" className="pb-1 md:pb-2 text-gray-300 hover:text-black dark:hover:text-white transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2">
+              <a href="https://drive.google.com/file/d/1keS_4wUeR87BP87ie8NEfGp1TZ40PeiY/view" target="_blank" rel="noopener noreferrer" className="pb-1 md:pb-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all duration-200 hover:scale-[1.02] flex items-center justify-center gap-2">
                 <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 <span className="hidden sm:inline font-medium text-sm">Resume</span>
               </a>
@@ -156,15 +156,15 @@ export default function Hero() {
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }} 
             className="shrink-0 relative group self-center md:self-auto w-[85vw] max-w-[22rem] sm:w-auto"
           >
-            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-white/5 dark:from-[#222]/50 dark:to-[#111]/50 backdrop-blur-md border border-gray-200 dark:border-white/20 rounded-[2.5rem] transform rotate-3 scale-105 group-hover:rotate-6 transition-transform duration-500 ease-out z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-white/5 dark:from-[#222]/50 dark:to-[#111]/50 backdrop-blur-md border border-gray-200 dark:border-white/20 rounded-[2.5rem] transform rotate-3 scale-105 group-hover:rotate-6 transition-transform duration-300 ease-out z-0"></div>
             <Image
               src={coverImage}
               alt="Aman Raj profile"
               width={500}
               height={500}
-              className="relative z-10 w-full aspect-square sm:w-72 sm:h-72 md:w-[22rem] md:h-[22rem] object-cover rounded-[2.5rem] shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 ease-out"
+              className="relative z-10 w-full aspect-square sm:w-72 sm:h-72 md:w-[22rem] md:h-[22rem] object-cover rounded-[2.5rem] shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-300 ease-out"
               priority
-              quality={90}
+              quality={70}
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 288px, 352px"
             />
           </motion.div>

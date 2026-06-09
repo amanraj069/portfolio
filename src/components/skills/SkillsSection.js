@@ -1,4 +1,5 @@
 "use client";
+import { memo } from "react";
 import { motion } from "framer-motion";
 
 const languages = ["C", "C++", "Java", "Python", "JavaScript"];
@@ -89,7 +90,7 @@ export default function SkillsSection() {
   );
 }
 
-function Section({ title, items }) {
+const Section = memo(function Section({ title, items }) {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -111,12 +112,12 @@ function Section({ title, items }) {
       </div>
     </motion.div>
   );
-}
+});
 
-function SkillBadge({ children }) {
+const SkillBadge = memo(function SkillBadge({ children }) {
   return (
-    <span className="px-3 md:px-4 py-1 md:py-2 bg-white dark:bg-black/40 backdrop-blur-md hover:bg-gray-50 dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 text-[11px] md:text-sm font-medium rounded-full border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300 cursor-default hover:scale-105 hover:-translate-y-0.5 hover:shadow-md">
+    <span className="px-3 md:px-4 py-1 md:py-2 bg-white dark:bg-[#1a1a1a] hover:bg-gray-50 dark:hover:bg-[#252525] text-gray-800 dark:text-gray-200 text-[11px] md:text-sm font-medium rounded-full border border-gray-200 dark:border-white/10 transition-transform duration-300 cursor-default hover:scale-105 hover:-translate-y-0.5 will-change-transform transform-gpu">
       {children}
     </span>
   );
-}
+});
