@@ -5,7 +5,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ThemeContext = createContext(undefined);
 
 export function ThemeProvider({ children }) {
-  const [theme, setThemeState] = useState("light");
+  const [theme, setThemeState] = useState("dark");
   const [mounted, setMounted] = useState(false);
 
   // Apply theme to document
@@ -27,10 +27,10 @@ export function ThemeProvider({ children }) {
       setThemeState(savedTheme);
       applyTheme(savedTheme);
     } else {
-      // Default to light theme if nothing is stored
-      setThemeState("light");
-      applyTheme("light");
-      localStorage.setItem("theme", "light");
+      // Default to dark theme if nothing is stored
+      setThemeState("dark");
+      applyTheme("dark");
+      localStorage.setItem("theme", "dark");
     }
   }, []);
 

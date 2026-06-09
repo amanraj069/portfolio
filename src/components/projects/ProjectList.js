@@ -1,18 +1,24 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 
 export default function ProjectList({ projects }) {
+  const [showAll, setShowAll] = useState(false);
+  const displayedProjects = showAll ? projects : projects.slice(0, 4);
+
   return (
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-      {projects.map((project, index) => (
+    <div className="flex flex-col w-full">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+        {displayedProjects.map((project, index) => (
         <motion.div
           key={project.id}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
+          whileHover={{ y: -5 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
-          className="w-full flex flex-col bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black dark:hover:border-white transition-colors duration-300 relative"
+          className="w-full flex flex-col bg-white dark:bg-black/40 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all duration-300 relative shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
         >
           {/* Entire card clickable link */}
           <a
@@ -24,7 +30,7 @@ export default function ProjectList({ projects }) {
           />
 
           {/* Image section */}
-          <div className="w-full relative bg-gray-50 dark:bg-[#111] border-b border-gray-200 dark:border-white/10 overflow-hidden">
+          <div className="w-full relative bg-gray-50 dark:bg-white/5 backdrop-blur-md border-b border-gray-200 dark:border-white/10 overflow-hidden">
             <div className="block relative">
               {project.image && project.image[0] && (
                 <Image
@@ -106,6 +112,17 @@ export default function ProjectList({ projects }) {
           </div>
         </motion.div>
       ))}
+      </div>
+      {!showAll && projects.length > 4 && (
+        <div className="flex justify-center mt-10">
+          <button 
+            onClick={() => setShowAll(true)}
+            className="px-6 py-2.5 sm:px-8 sm:py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:scale-105 transition-all duration-300 shadow-xl"
+          >
+            Show More
+          </button>
+        </div>
+      )}
     </div>
   );
 }

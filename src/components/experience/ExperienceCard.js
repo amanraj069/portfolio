@@ -22,13 +22,14 @@ const ExperienceCard = ({ exp, index = 0 }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
+      whileHover={{ y: -5 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="w-full flex flex-col bg-white dark:bg-[#0a0a0a] border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black dark:hover:border-white transition-colors duration-300 mb-8 shadow-sm hover:shadow-lg"
+      className="w-full flex flex-col bg-white dark:bg-black/40 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-3xl overflow-hidden group hover:border-black/30 dark:hover:border-white/30 transition-all duration-300 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]"
     >
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-stretch gap-0`}>
         
         {/* Image side */}
-        <div className={`w-full md:w-1/2 relative bg-gray-50 dark:bg-[#111] overflow-hidden flex items-center justify-center p-3 md:p-8 border-b md:border-b-0 ${isEven ? 'md:border-r' : 'md:border-l'} border-gray-200 dark:border-white/10`}>
+        <div className={`w-full md:w-1/2 relative bg-gray-50 dark:bg-white/5 backdrop-blur-md overflow-hidden flex items-center justify-center p-3 md:p-8 border-b md:border-b-0 ${isEven ? 'md:border-r' : 'md:border-l'} border-gray-200 dark:border-white/10`} >
           <Image
             src={images[current]}
             alt={exp.title}

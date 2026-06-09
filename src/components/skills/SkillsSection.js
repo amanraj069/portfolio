@@ -115,7 +115,7 @@ function Section({ title, items }) {
 
 function SkillBadge({ children }) {
   return (
-    <span className="px-3 md:px-4 py-1 md:py-2 bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 text-[11px] md:text-sm font-medium rounded-full border border-gray-200/50 dark:border-white/5 transition-all duration-300 cursor-default">
+    <span className="px-3 md:px-4 py-1 md:py-2 bg-white dark:bg-black/40 backdrop-blur-md hover:bg-gray-50 dark:hover:bg-white/10 text-gray-800 dark:text-gray-200 text-[11px] md:text-sm font-medium rounded-full border border-gray-200 dark:border-white/10 shadow-sm transition-all duration-300 cursor-default hover:scale-105 hover:-translate-y-0.5 hover:shadow-md">
       {children}
     </span>
   );

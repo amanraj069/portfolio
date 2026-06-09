@@ -93,7 +93,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="w-full flex flex-col items-center px-4 md:px-12 py-10 md:py-16">
-      <div className="w-full max-w-5xl mb-10 md:mb-12">
+      <div className="w-full max-w-5xl mb-6 lg:mb-8">
         <h2 className="text-2xl md:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-black dark:text-white">
           Projects
         </h2>
