@@ -36,7 +36,8 @@ const ExperienceCard = ({ exp, index = 0 }) => {
             width={800}
             height={450}
             className="w-full h-auto object-contain rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgba(0,0,0,0.4)] transition-transform duration-700 group-hover:scale-[1.03]"
-            priority
+            quality={85}
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
           {images.length > 1 && (
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">

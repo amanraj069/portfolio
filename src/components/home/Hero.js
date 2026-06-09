@@ -1,12 +1,20 @@
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 import ExperienceList from "@/components/experience/ExperienceList";
+import coverImage from "../../../public/home/cover_me.JPG";
+
+import enestImage from "../../../public/exp/Enest.png";
+import metastarImage from "../../../public/exp/Metastar.png";
+import gdgImage from "../../../public/exp/GDG.JPG";
+import smallgroupImage from "../../../public/exp/Smallgroup.png";
+import epochImage from "../../../public/exp/Epoch_D1.JPG";
+import iotaImage from "../../../public/exp/IOTA.JPG";
 
 export default function Hero() {
   const experiences = [
     {
       id: "enest",
-      image: ["/exp/Enest.png"],
+      image: [enestImage],
       title: "SDE Intern at Enest",
       duration: "Feb 2025 - Dec 2025",
       description: [
@@ -17,7 +25,7 @@ export default function Hero() {
     },
     {
       id: "metastar",
-      image: ["/exp/Metastar.png"],
+      image: [metastarImage],
       title: "SDE Intern at MetaStar Media",
       duration: "July 2025 - Sep 2025",
       description: [
@@ -28,7 +36,7 @@ export default function Hero() {
     },
     {
       id: "gdg",
-      image: ["/exp/GDG.JPG"],
+      image: [gdgImage],
       title: "Head of Technology at Google Developers Group IIIT Sricity",
       duration: "Aug 2025 - Present",
       description: [
@@ -39,7 +47,7 @@ export default function Hero() {
     },
     {
       id: "smallgroup",
-      image: ["/exp/Smallgroup.png"],
+      image: [smallgroupImage],
       title: "Automation Intern at SmallGroup",
       duration: "July 2025 - Sep 2025",
       description: [
@@ -50,7 +58,7 @@ export default function Hero() {
     },
     {
       id: "epoch",
-      image: ["/exp/Epoch_D1.JPG"],
+      image: [epochImage],
       title: "Deep Learning Core at Epoch",
       duration: "Aug 2024 - Aug 2025",
       description: [
@@ -61,7 +69,7 @@ export default function Hero() {
     },
     {
       id: "iota",
-      image: ["/exp/IOTA.JPG"],
+      image: [iotaImage],
       title: "AI/ML Core at IOTA",
       duration: "Aug 2024 - Aug 2025",
       description: [
@@ -150,12 +158,14 @@ export default function Hero() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-white/5 dark:from-[#222]/50 dark:to-[#111]/50 backdrop-blur-md border border-gray-200 dark:border-white/20 rounded-[2.5rem] transform rotate-3 scale-105 group-hover:rotate-6 transition-transform duration-500 ease-out z-0"></div>
             <Image
-              src="/home/cover_me.JPG"
+              src={coverImage}
               alt="Aman Raj profile"
               width={500}
               height={500}
               className="relative z-10 w-full aspect-square sm:w-72 sm:h-72 md:w-[22rem] md:h-[22rem] object-cover rounded-[2.5rem] shadow-2xl grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 ease-out"
               priority
+              quality={90}
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 288px, 352px"
             />
           </motion.div>
         </div>

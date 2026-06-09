@@ -39,7 +39,8 @@ export default function ProjectList({ projects }) {
                   width={800}
                   height={450}
                   className={`w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02] ${project.darkImage ? 'dark:hidden' : ''}`}
-                  unoptimized
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               )}
               {project.darkImage && project.darkImage[0] && (
@@ -49,7 +50,8 @@ export default function ProjectList({ projects }) {
                   width={800}
                   height={450}
                   className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02] hidden dark:block"
-                  unoptimized
+                  quality={85}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               )}
               {/* Subtle overlay on hover */}

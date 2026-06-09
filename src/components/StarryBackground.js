@@ -1,15 +1,15 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, memo } from "react";
 
-export default function StarryBackground() {
+const StarryBackground = memo(function StarryBackground() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true });
     let animationFrameId;
 
     // Set canvas dimensions
@@ -28,21 +28,36 @@ export default function StarryBackground() {
       timeoutId = setTimeout(resizeCanvas, 200);
     };
     
-    window.addEventListener("resize", handleResize);
+    // Passive event listener for better scrolling performance
+    window.addEventListener("resize", handleResize, { passive: true });
 
-    // Create stars
-    const numStars = 200; // Reduced density for subtlety
-    const stars = Array.from({ length: numStars }).map(() => ({
-      x: Math.random() * (window.innerWidth || 1000),
-      y: Math.random() * (window.innerHeight || 1000),
+    // Create stars - dramatically reduced density for performance
+    // Calculate based on screen area, max 75 stars
+    const numStars = Math.min(75, Math.floor((window.innerWidth * window.innerHeight) / 15000));
+    const stars = Array.from({ length: numStars || 50 }).map(() => ({
+      x: Math.random() * (canvas.width || 1000),
+      y: Math.random() * (canvas.height || 1000),
       radius: Math.random() * 1.0 + 0.2, // Much smaller stars
-      vx: Math.random() * 0.1 - 0.05,
-      vy: Math.random() * 0.1 - 0.05,
+      vx: Math.random() * 0.05 - 0.025, // Reduced velocity
+      vy: Math.random() * 0.05 - 0.025,
       opacity: Math.random() * 0.5,
-      twinkleSpeed: Math.random() * 0.02 + 0.005,
+      twinkleSpeed: Math.random() * 0.005 + 0.001, // Slower twinkle frequency
     }));
 
-    const draw = () => {
+    let lastDrawTime = 0;
+    const targetFPS = 30; // Limit FPS to 30 to save compute
+    const frameInterval = 1000 / targetFPS;
+    const PI2 = Math.PI * 2;
+
+    const draw = (timestamp) => {
+      animationFrameId = requestAnimationFrame(draw);
+
+      // Throttle frame rate for performance optimization
+      const deltaTime = timestamp - lastDrawTime;
+      if (deltaTime < frameInterval) return;
+
+      lastDrawTime = timestamp - (deltaTime % frameInterval);
+
       // Clear canvas with a transparent background
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -53,9 +68,10 @@ export default function StarryBackground() {
 
         // Wrap around edges
         if (star.x < 0) star.x = canvas.width;
-        if (star.x > canvas.width) star.x = 0;
+        else if (star.x > canvas.width) star.x = 0;
+        
         if (star.y < 0) star.y = canvas.height;
-        if (star.y > canvas.height) star.y = 0;
+        else if (star.y > canvas.height) star.y = 0;
 
         // Twinkle
         star.opacity += star.twinkleSpeed;
@@ -63,17 +79,21 @@ export default function StarryBackground() {
           star.twinkleSpeed = -star.twinkleSpeed;
         }
 
+        // Fast bounds checking for opacity
+        let drawOpacity = star.opacity;
+        if (drawOpacity < 0) drawOpacity = 0;
+        else if (drawOpacity > 1) drawOpacity = 1;
+
         // Draw star
         ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${Math.max(0, Math.min(1, star.opacity))})`;
+        // Math.floor prevents sub-pixel rendering, improving performance
+        ctx.arc(Math.floor(star.x), Math.floor(star.y), star.radius, 0, PI2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${drawOpacity.toFixed(2)})`; // Round opacity string
         ctx.fill();
       });
-
-      animationFrameId = requestAnimationFrame(draw);
     };
 
-    draw();
+    animationFrameId = requestAnimationFrame(draw);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -88,4 +108,6 @@ export default function StarryBackground() {
       className="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-0 dark:opacity-100 transition-opacity duration-1000"
     />
   );
-}
+});
+
+export default StarryBackground;
