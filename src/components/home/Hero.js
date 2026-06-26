@@ -3,7 +3,7 @@ import * as motion from "framer-motion/client";
 import ExperienceList from "@/components/experience/ExperienceList";
 import coverImage from "../../../public/home/cover_me.JPG";
 
-import enestImage from "../../../public/exp/Enest.png";
+import enestImage from "../../../public/projects/Enest.png";
 import metastarImage from "../../../public/exp/Metastar.png";
 import gdgImage from "../../../public/exp/GDG.JPG";
 import smallgroupImage from "../../../public/exp/Smallgroup.png";
@@ -18,21 +18,21 @@ export default function Hero() {
       title: "SDE Intern at Enest",
       duration: "Feb 2025 - Dec 2025",
       description: [
-        "Architected and deployed 45+ RESTful APIs and full-stack features using Next.js, Express, and MongoDB, scaling to 5,000+ MAU.",
-        "Slashed page load times by 40% via SSR optimizations and engineered strict role-based access control (RBAC) via JWT.",
+        "Collaborated with product stakeholders to define requirements, developing full-stack agri-tech applications on Next.js, Node.js, MongoDB, and AWS, improving availability and reliability serving 15,000+ users in production.",
+        "Applied algorithmic optimizations to refactor backend APIs, reducing response time by 27% and server load by 12%; implemented CloudWatch monitoring to improve production observability and incident response.",
       ],
       link: "https://www.enestskill.com/",
     },
     {
-      id: "metastar",
-      image: [metastarImage],
-      title: "SDE Intern at MetaStar Media",
+      id: "smallgroup",
+      image: [smallgroupImage],
+      title: "Automation Intern at SmallGroup",
       duration: "July 2025 - Sep 2025",
       description: [
-        "Engineered a high-performance backend with Node.js and MySQL, implementing strict rate-limiting and processing 1,000+ daily requests.",
-        "Built an expansive UI library of 50+ reusable React components, accelerating cross-team frontend development pipelines by 30%.",
+        "Coordinated with operations and growth teams to gather requirements and architected 10+ n8n automation pipelines, scraping 100+ leads daily synced to Google Sheets, reducing manual data entry by 80%.",
+        "Ramped up on OpenAI embeddings and GPT-4 to engineer an agentic RAG pipeline with semantic retrieval, context re-ranking, and chunk indexing, autonomously resolving 80% of initial inquiries.",
       ],
-      link: "https://metastarmedia.io/",
+      link: "https://www.smallgrp.com/",
     },
     {
       id: "gdg",
@@ -45,16 +45,16 @@ export default function Hero() {
       ],
       link: "https://www.linkedin.com/posts/amanraj-iiits_googledevelopergroup-techleadership-innovation-ugcPost-7366142880517672961-yrkh/",
     },
-    {
-      id: "smallgroup",
-      image: [smallgroupImage],
-      title: "Automation Intern at SmallGroup",
+        {
+      id: "metastar",
+      image: [metastarImage],
+      title: "SDE Intern at MetaStar Media",
       duration: "July 2025 - Sep 2025",
       description: [
-        "Engineered complex n8n automation pipelines and AI agents, driving a 60% increase in lead generation efficiency.",
-        "Integrated GPT-4, Gemini, and Pinecone vector databases to build highly accurate RAG chatbots handling 200+ daily queries.",
+        "Engineered a high-performance backend with Node.js and MySQL, implementing strict rate-limiting and processing 1,000+ daily requests.",
+        "Built an expansive UI library of 50+ reusable React components, accelerating cross-team frontend development pipelines by 30%.",
       ],
-      link: "https://www.smallgrp.com/",
+      link: "https://metastarmedia.io/",
     },
     {
       id: "epoch",
@@ -112,7 +112,7 @@ export default function Hero() {
               <h1 className="text-2xl sm:text-5xl md:text-6xl font-medium tracking-tight text-black dark:text-white leading-none">
                 Hi, I&apos;m Aman.
               </h1>
-              <a href="https://drive.google.com/file/d/1keS_4wUeR87BP87ie8NEfGp1TZ40PeiY/view" target="_blank" rel="noopener noreferrer" className="pb-1 md:pb-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all duration-200 hover:scale-[1.02] flex items-center justify-center gap-2">
+              <a href="https://drive.google.com/file/d/1o9ORCqaFYRduxVxBJa5NNjQvqwUteJwQ/view" target="_blank" rel="noopener noreferrer" className="pb-1 md:pb-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all duration-200 hover:scale-[1.02] flex items-center justify-center gap-2">
                 <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 <span className="hidden sm:inline font-medium text-sm">Resume</span>
               </a>
@@ -120,13 +120,13 @@ export default function Hero() {
             <p className="text-sm sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl font-light">
               Exploring the fun behind software engineering and computers. 
               Computer Science student at IIIT Sricity with expertise in
-              full-stack development, AI/ML, and modern web technologies.
+              full-stack development, GenAI, and modern web technologies.
             </p>
             <div className="mt-8 flex items-center justify-between w-full flex-wrap gap-y-6">
               <div className="flex gap-4 sm:gap-6 items-center flex-wrap">
                 <div className="flex flex-col">
                   <span className="text-xs text-gray-400 uppercase tracking-wider font-semibold">CGPA</span>
-                  <span className="text-sm font-medium">9.15</span>
+                  <span className="text-sm font-medium">9.27</span>
                 </div>
                 <div className="w-[1px] h-8 bg-gray-200 dark:bg-white/10"></div>
                 <div className="flex flex-col">

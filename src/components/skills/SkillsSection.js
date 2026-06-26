@@ -14,15 +14,16 @@ const backend = [
   "GraphQL",
   "WebSockets",
   "Apache Kafka",
-  "Apache Solr",
 ];
 
 const databases = ["MongoDB", "MySQL", "PostgreSQL", "Redis", "SQLite"];
 
 const aiMl = [
   "LangChain",
-  "Generative AI",
-  "RAG Pipelines",
+  "LangGraph",
+  "GenAI",
+  "Advanced RAG",
+  "Agentic AI",
   "Deep Learning",
   "Prompt Engineering",
 ];

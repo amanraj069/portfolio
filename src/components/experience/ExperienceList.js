@@ -4,14 +4,14 @@ import ExperienceCard from "./ExperienceCard";
 
 const ExperienceList = ({ experiences }) => {
   const [showAll, setShowAll] = useState(false);
-  const displayedExperiences = showAll ? experiences : experiences.slice(0, 4);
+  const displayedExperiences = showAll ? experiences : experiences.slice(0, 3);
 
   return (
     <div className="flex flex-col gap-4 sm:gap-8 w-full mb-12">
       {displayedExperiences.map((exp, index) => (
         <ExperienceCard key={exp.id} exp={exp} index={index} />
       ))}
-      {!showAll && experiences.length > 4 && (
+      {!showAll && experiences.length > 3 && (
         <div className="flex justify-center mt-4">
           <button 
             onClick={() => setShowAll(true)}
