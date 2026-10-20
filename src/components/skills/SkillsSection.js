@@ -2,7 +2,7 @@
 import { memo } from "react";
 import { motion } from "framer-motion";
 
-const languages = ["C", "C++", "Java", "Python", "JavaScript"];
+const languages = ["C", "C++", "Java", "Python", "JavaScript", "TypeScript"];
 
 const frontend = ["React.js", "Next.js", "Tailwind CSS", "HTML5", "CSS3"];
 
@@ -14,9 +14,19 @@ const backend = [
   "GraphQL",
   "WebSockets",
   "Apache Kafka",
+  "BullMQ",
+  "Zod",
 ];
 
-const databases = ["MongoDB", "MySQL", "PostgreSQL", "Redis", "SQLite"];
+const databases = [
+  "MongoDB",
+  "MySQL",
+  "PostgreSQL",
+  "Redis",
+  "SQLite",
+  "DynamoDB",
+  "FalkorDB (Cypher)",
+];
 
 const aiMl = [
   "LangChain",
@@ -24,12 +34,18 @@ const aiMl = [
   "GenAI",
   "Advanced RAG",
   "Agentic AI",
+  "MCP",
+  "Knowledge Graphs",
+  "Amazon Bedrock",
+  "Strands Agents",
+  "Gemini API",
+  "OR-Tools (CP-SAT)",
   "Deep Learning",
   "Prompt Engineering",
 ];
 
 const cloudAndDevOps = [
-  "AWS (EC2, S3, Lambda, ALB)",
+  "AWS (EC2, S3, Lambda, ALB, SQS, Cognito, CloudFront, Amplify)",
   "Google Cloud",
   "Docker",
   "Kubernetes",
@@ -60,7 +76,7 @@ export default function SkillsSection() {
   };
 
   return (
-    <section id="skills" className="w-full flex flex-col items-center px-4 md:px-12 py-10 md:py-16">
+    <section id="skills" className="scroll-mt-16 w-full flex flex-col items-center px-4 md:px-12 py-8 md:py-12">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -68,7 +84,7 @@ export default function SkillsSection() {
         viewport={{ once: true, margin: "-100px" }}
         className="w-full max-w-5xl"
       >
-        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }} className="mb-10 md:mb-12">
+        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } } }} className="mb-6 md:mb-8">
           <h2 className="text-2xl md:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-black dark:text-white">
             Skills & Expertise
           </h2>
@@ -77,7 +93,7 @@ export default function SkillsSection() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex flex-col gap-4">
           <Section title="Languages" items={languages} />
           <Section title="Frontend" items={frontend} />
           <Section title="Backend" items={backend} />
@@ -102,11 +118,11 @@ const Section = memo(function Section({ title, items }) {
   };
 
   return (
-    <motion.div variants={itemVariants} className="w-full border-b border-gray-200 dark:border-white/10 pb-4 md:pb-6 last:border-0">
-      <h3 className="text-base md:text-xl font-semibold md:font-medium mb-3 md:mb-6 text-black dark:text-white">
+    <motion.div variants={itemVariants} className="w-full flex flex-col md:flex-row md:items-start gap-3 md:gap-6 border-b border-gray-200 dark:border-white/10 pb-4 last:border-0">
+      <h3 className="md:w-44 md:shrink-0 md:pt-1.5 text-base md:text-lg font-semibold md:font-medium text-black dark:text-white">
         {title}
       </h3>
-      <div className="flex flex-wrap gap-3">
+      <div className="flex flex-wrap gap-2 md:gap-2.5">
         {items.map((item) => (
           <SkillBadge key={item}>{item}</SkillBadge>
         ))}
@@ -117,7 +133,7 @@ const Section = memo(function Section({ title, items }) {
 
 const SkillBadge = memo(function SkillBadge({ children }) {
   return (
-    <span className="px-3 md:px-4 py-1 md:py-2 bg-white dark:bg-[#1a1a1a] hover:bg-gray-50 dark:hover:bg-[#252525] text-gray-800 dark:text-gray-200 text-[11px] md:text-sm font-medium rounded-full border border-gray-200 dark:border-white/10 transition-transform duration-300 cursor-default hover:scale-105 hover:-translate-y-0.5 will-change-transform transform-gpu">
+    <span className="px-3 md:px-4 py-1 md:py-1.5 bg-white dark:bg-[#1a1a1a] hover:bg-gray-50 dark:hover:bg-[#252525] text-gray-800 dark:text-gray-200 text-[11px] md:text-sm font-medium rounded-full border border-gray-200 dark:border-white/10 transition-transform duration-300 cursor-default hover:scale-105 hover:-translate-y-0.5 will-change-transform transform-gpu">
       {children}
     </span>
   );

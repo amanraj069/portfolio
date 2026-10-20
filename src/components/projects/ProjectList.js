@@ -53,9 +53,9 @@ const ProjectCard = memo(({ project, index }) => {
       </div>
 
       {/* Content section */}
-      <div className="p-4 md:p-6 flex flex-col flex-1 transform-gpu">
+      <div className="p-4 md:p-6 flex flex-col flex-1">
         {/* Header section with Title and Links */}
-        <div className="flex flex-row justify-between items-start mb-4 gap-4">
+        <div className="flex flex-row justify-between items-start mb-3 gap-4">
           <h2 className="text-lg md:text-2xl font-semibold md:font-medium text-black dark:text-white transition-colors duration-300">
             {project.title}
           </h2>
@@ -87,7 +87,7 @@ const ProjectCard = memo(({ project, index }) => {
         </div>
 
         {/* Tech stack */}
-        <div className="flex flex-wrap gap-2 mb-6 relative z-20">
+        <div className="flex flex-wrap gap-2 mb-4 relative z-20">
           {project.techstack.map((tech) => (
             <span
               key={tech}
@@ -117,13 +117,13 @@ export default function ProjectList({ projects }) {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
         {displayedProjects.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
       {!showAll && projects.length > 4 && (
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-8">
           <button 
             onClick={() => setShowAll(true)}
             className="px-6 py-2.5 sm:px-8 sm:py-4 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:scale-[1.02] transition-all duration-200 shadow-xl"

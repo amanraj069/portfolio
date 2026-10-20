@@ -29,7 +29,7 @@ const ExperienceCard = ({ exp, index = 0 }) => {
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-stretch gap-0`}>
         
         {/* Image side */}
-        <div className={`w-full md:w-1/2 relative bg-gray-50 dark:bg-white/5 backdrop-blur-md overflow-hidden flex items-center justify-center p-3 md:p-8 border-b md:border-b-0 ${isEven ? 'md:border-r' : 'md:border-l'} border-gray-200 dark:border-white/10`} >
+        <div className={`w-full md:w-1/2 relative bg-gray-50 dark:bg-white/5 backdrop-blur-md overflow-hidden flex items-center justify-center p-3 md:p-6 border-b md:border-b-0 ${isEven ? 'md:border-r' : 'md:border-l'} border-gray-200 dark:border-white/10`} >
           <Image
             src={images[current]}
             alt={exp.title}
@@ -54,16 +54,16 @@ const ExperienceCard = ({ exp, index = 0 }) => {
         </div>
 
         {/* Content side */}
-        <div className="w-full md:w-1/2 p-4 md:p-8 flex flex-col justify-center">
-          <div className="text-[10px] md:text-sm font-mono text-gray-400 dark:text-gray-500 mb-1.5 md:mb-3">{exp.duration}</div>
+        <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col justify-center">
+          <div className="text-[10px] md:text-sm font-mono text-gray-400 dark:text-gray-500 mb-1.5 md:mb-2">{exp.duration}</div>
           
-          <h2 className="text-lg md:text-3xl font-semibold md:font-medium mb-3 md:mb-6 text-black dark:text-white transition-colors">
+          <h2 className="text-lg md:text-2xl font-semibold md:font-medium mb-3 md:mb-4 text-black dark:text-white transition-colors">
             {exp.title}
           </h2>
 
           <div className="flex-1">
             {Array.isArray(exp.description) ? (
-              <ul className="text-gray-600 dark:text-gray-400 text-[11px] md:text-base leading-relaxed space-y-2 md:space-y-4">
+              <ul className="text-gray-600 dark:text-gray-400 text-[11px] md:text-base leading-relaxed space-y-2 md:space-y-3">
                 {exp.description.map((point, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="mr-3 mt-2.5 w-1.5 h-1.5 bg-gray-300 dark:bg-gray-700 rounded-full flex-shrink-0"></span>

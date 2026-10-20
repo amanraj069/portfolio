@@ -98,7 +98,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen pt-32 md:pt-36 pb-10 md:pb-16 px-4 md:px-12 flex flex-col items-center">
+    <section id="home" className="pt-32 md:pt-36 pb-8 md:pb-12 px-4 md:px-12 flex flex-col items-center">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -106,7 +106,7 @@ export default function Hero() {
         className="max-w-5xl w-full"
       >
         {/* Top Header Section */}
-        <div className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-8 md:gap-12 mb-12 md:mb-16">
+        <div className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-10 md:gap-16 mb-12 md:mb-16">
           <motion.div variants={itemVariants} className="flex-1">
             <div className="flex items-end justify-between gap-4 sm:gap-6 mb-3 md:mb-6">
               <h1 className="text-2xl sm:text-5xl md:text-6xl font-medium tracking-tight text-black dark:text-white leading-none">
@@ -117,12 +117,12 @@ export default function Hero() {
                 <span className="hidden sm:inline font-medium text-sm">Resume</span>
               </a>
             </div>
-            <p className="text-sm sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl font-light">
+            <p className="text-sm sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl font-light mt-2 md:mt-0">
               Exploring the fun behind software engineering and computers. 
               Computer Science student at IIIT Sricity with expertise in
               full-stack development, GenAI, and modern web technologies.
             </p>
-            <div className="mt-8 flex items-center justify-between w-full flex-wrap gap-y-6">
+            <div className="mt-8 md:mt-10 flex items-center justify-between w-full flex-wrap gap-y-6">
               <div className="flex gap-4 sm:gap-6 items-center flex-wrap">
                 <div className="flex flex-col">
                   <span className="text-xs text-gray-400 uppercase tracking-wider font-semibold">CGPA</span>
@@ -171,8 +171,8 @@ export default function Hero() {
         </div>
 
         {/* Experience Section */}
-        <motion.div id="experience" variants={itemVariants} className="mt-8 md:mt-16 w-full">
-          <div className="mb-10 md:mb-12">
+        <motion.div id="experience" variants={itemVariants} className="w-full scroll-mt-28">
+          <div className="mb-6 md:mb-8">
             <h2 className="text-2xl md:text-5xl font-medium tracking-tight mb-2 md:mb-4 text-black dark:text-white">
               Experience
             </h2>
