@@ -25,7 +25,7 @@ export default function ContactSection() {
           Let&apos;s Connect
         </h2>
         <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 font-light mb-8 md:mb-10">
-          I&apos;m currently available for hire! Always open to discussing new projects, creative ideas, or full-time opportunities to be part of your vision.
+          I&apos;m actively looking for internship opportunities and eager to join, available to start right away. Always open to discussing new projects, creative ideas, or full-time opportunities to be part of your vision.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full justify-center">
